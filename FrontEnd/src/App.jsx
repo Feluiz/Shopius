@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import { Outlet } from 'react-router';
+import CustomHeader from './Components/Main/CustomHeader/CustomHeader'
+import CustomFooter from './Components/Main/CustomFooter/CustomFooter'
 import axios from 'axios'
 import './App.css'
 
@@ -12,10 +15,16 @@ function App() {
     }
   };
 
+  const [currentTab, setCurrentTab] = useState('home');
+  const activeTab = (clickedTab) => {
+    setCurrentTab(clickedTab);
+  };
+
   return (
     <>
-      <div className='bg-black'>Hello World!</div>
-      <button onClick={fetchData}>Fetch Data</button>
+      <CustomHeader actions={activeTab}/>
+      <Outlet />
+      <CustomFooter />
     </>
   )
 }
