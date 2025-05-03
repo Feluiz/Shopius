@@ -1,17 +1,16 @@
 @import "tailwindcss";
 
-
-
 .App-header {
-  @apply sticky top-0 bg-white max-w-full flex flex-row items-center justify-center text-2xl
+  max-height: 5rem;
+  position: sticky;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
-.App-logo {
+.app-logo {
   max-height: 5rem;
-  pointer-events: none;
-  margin: 0.5rem;
-  margin-left: 1em;
-  margin-right: 0;
 }
 
 .container {
@@ -51,7 +50,7 @@
 
 .nav-bar {
   display: flex;
-  color: #173519;
+  color: black;
   justify-content: space-around;
   align-items: center;
   width: 50%;
@@ -64,7 +63,7 @@
   justify-content: center;
   width: 10rem;
   font-size: xx-large;
-  padding: 1rem;
+  padding: auto;
   cursor: pointer;
 }
 

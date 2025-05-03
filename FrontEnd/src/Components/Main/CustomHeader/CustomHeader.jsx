@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './CustomHeader.css';
-import logo from '../../../imgs/main-logo.png';
+import logo from '../../../imgs/gallery/shopius.PNG';
 import { NavLink } from 'react-router';
 
 const CustomHeader = (props) => {
@@ -49,7 +49,7 @@ const CustomHeader = (props) => {
 
     return (
         <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
+            <img src={logo} className="app-logo" alt="logo" />
             <div className={bar2} onClick={myFunction}>
                 <div className="change bar1"></div>
                 <div className="change bar2"></div>
