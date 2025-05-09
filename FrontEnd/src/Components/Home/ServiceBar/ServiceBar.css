@@ -1,23 +1,39 @@
 .service-wrap {
-    background: url('../../../imgs/bar-bg.png');
+    background: rgb(198, 125, 57);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;
     margin-bottom: 7rem;
     margin: 0 auto;
     border-bottom: 5px black solid;
-    border-bottom-left-radius: 10rem;
-    border-bottom-right-radius: 10rem;
     max-width: 100%;
+    height: 40rem;
+    justify-content: center;
+}
+
+.magic-word-wrap {
+    background-color: black;
+    width: 15rem;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    transition: all .5s ease-in-out;
+}
+
+.magic-word {
+    color: white;
+    padding: 10px;
+    font-size: xxx-large;
+    text-align: center;
 }
 
 .service-wrap > h2 {
-    text-shadow: rgb( 36, 116, 58 ) 5px 5px 10px;
-    color: white;
+    /* text-shadow: rgb( 36, 116, 58 ) 5px 5px 10px; */
     font-size: 3rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-self: center;
 }
 
 .service-overlay {

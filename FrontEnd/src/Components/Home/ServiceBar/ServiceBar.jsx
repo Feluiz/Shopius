@@ -1,19 +1,39 @@
 import './ServiceBar.css';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router';
 import img1 from '../../../imgs/ecotact-logo.png';
 import img11 from '../../../imgs/gallery/backgr-1.jpg';
 import img2 from '../../../imgs/yuteco/yuteco-logo.png';
 import img22 from '../../../imgs/gallery/yute.webp';
 import img3 from '../../../imgs/Finca/finca-logo.png';
-import img33 from '../../../imgs/gallery/finca.webp'
+import img33 from '../../../imgs/gallery/finca.webp';
 
 const ServiceBar = (tabData) => {
+
+    const magicWordList = ['proveedor', 'servicio', 'producto'];
+    const [magicWord, setMagicWord] = useState('proveedor');
+    const delay = 1000;
+    let index = 0;
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setMagicWord(magicWordList[index]);
+            index = (index + 1) % magicWordList.length;
+        }, delay);
+
+        return () => clearInterval(interval);
+    }, []);
+    
 
 
     return (
         <>
             <div className='service-wrap'>
-                <h2>Haz click para visitar nuestros servicios</h2>
+                <h2>Encuentra el </h2>
+                <div className='magic-word-wrap'>
+                    <h2 className='magic-word'>{magicWord}</h2>
+                </div>
+                <h2> que estás buscando</h2>
                 <nav className='sevice-bar'>
                     <ul className='service-list'>
                         <li id='ecotact' className='service-container'>

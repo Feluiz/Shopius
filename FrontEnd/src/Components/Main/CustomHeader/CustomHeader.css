@@ -1,17 +1,28 @@
 @import "tailwindcss";
 
-
-
 .App-header {
-  @apply sticky top-0 bg-white max-w-full flex flex-row items-center justify-center text-2xl
+  max-height: 5rem;
+  position: sticky;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: .5rem auto;
+  align-items: center;
 }
 
-.App-logo {
+.logo-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo-name {
+  font-size: xxx-large;
+  font-family: fantasy;
+}
+
+.app-logo {
   max-height: 5rem;
-  pointer-events: none;
-  margin: 0.5rem;
-  margin-left: 1em;
-  margin-right: 0;
 }
 
 .container {
@@ -19,6 +30,10 @@
   cursor: pointer;
   display: none;
   position: relative;
+}
+
+.ui-icons {
+  max-height: 1.55rem;
 }
 
 /* burger menu */
@@ -51,20 +66,31 @@
 
 .nav-bar {
   display: flex;
-  color: #173519;
-  justify-content: space-around;
+  color: black;
+  justify-content: space-evenly;
   align-items: center;
-  width: 50%;
-  margin: auto;
+  margin-right: auto;
+  width: 35%;
   transition: 0.4s;
+}
+
+.nav-bar-compl {
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  margin-left: auto;
+  margin-right: 1.5rem;
+  max-width: 10%;
 }
 
 .navbar-option {
   display: flex;
   justify-content: center;
   width: 10rem;
-  font-size: xx-large;
-  padding: 1rem;
+  font-size: x-large;
+  padding: auto;
   cursor: pointer;
 }
 
